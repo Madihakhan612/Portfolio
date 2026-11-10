@@ -63,10 +63,22 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-    /* flex-direction: column;
-    align-items: center;
-    justify-content: center; */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);  
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    text-decoration:none;
+}
+
+.logo img{
+    width: 190px;
+    height: 70px;
+    object-fit: contain;
+    display:block;
+    background-color: var(--cream);
+    border-radius: 5px;
 }
 
 .navbar {
@@ -116,6 +128,16 @@ header {
     color: var(--secondary);
 }
 
+.menu-checkbox {
+    display: none;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--primary);
+}
 .social-icons {
     display: flex;
     justify-content: flex-end;
@@ -718,21 +740,6 @@ header {
         font-size: 19px;
     }
 
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-
-    .nav-links a {
-        font-size: 12px;
-    }
-
-    .social-icons {
-        justify-content: center;
-        gap: 18px;
-    }
-
     .hero {
         flex-direction: column-reverse;
         text-align: center;
@@ -869,29 +876,6 @@ header {
         align-items: center;
     }
 
-    .nav-links {
-        /* gap: 9px;
-        justify-content: center;
-        flex-wrap: wrap; */
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links a {
-        font-size: 11px;
-    }
-    .social-icons {
-        display: none;
-    }
-    .nav-toggle {
-        display:block;
-        flex-shrink: 0;
-    }
-
     .skill-card {
         width: 120px;
     }
@@ -909,4 +893,38 @@ header {
         font-size: 13px;
     }
 
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .nav-toggle{
+        display:block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        padding: 20px 0;
+        align-items: center;
+    }
+
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .social-icons {
+        display: none;
+    }
+    .logo img{
+        width: 160px;
+    }
 }
