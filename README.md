@@ -72,7 +72,7 @@ No build tools or package installation are required.
 The `Screenshot/` folder contains the supplied desktop, tablet, and mobile website screenshots, along with HTML/CSS code screenshots.
 
 ## Before Submission — Please Verify
-- Replace the sample contact email `madiha.khan@example.com` with the correct email address.
+- Replace the sample contact email `madihakhanpk126@gmail.com` with the correct email address.
 - Replace the sample phone number `+92 300 1234567` with the correct number.
 - Confirm that the education program and study dates are accurate.
 - Test all project, GitHub, LinkedIn, and social links.
